@@ -1,0 +1,39 @@
+[tool.ruff]
+
+lint.preview = true
+format.preview = true
+
+lint.select = [
+]
+
+lint.extend-select = [
+    "E1", "E2", "E3", "E5", "W",  # pycodestyle previews
+    # "I",  # isort (I)
+    "PLR",  # Refactor (PLR)
+]
+
+lint.ignore = [
+    "ANN",  # flake8/ruff annotations (ANN) disabled globally right now.  Goes back to extend probably
+    "ANN401",  # ANN401 Dynamically typed expressions (typing.Any) are disallowed in `*args`
+    "E201",  # E201 whitespace after '('
+    "E241",  # E241 multiple spaces after ','
+    "E265",  # E265 block comment should start with '# '
+    "E501",  # E501 line-too-long - Line too long ({width} > {limit})
+    "E701",  # E701 Multiple statements on one line (colon)
+    "E731",  # E731 lambda-assignment - Do not assign a lambda expression, use a def
+    "E741",  # E741 Ambiguous variable name: `l`
+    "PLR0913",  # PLR0913 Too many arguments in function definition (6 > 5)
+    "PLR0917",  # TPLR0917oo many positional arguments (6/5)
+    "PLR6301",  # Method `reset` could be a function, class method, or static method
+    "PLR2004",  # PLR2004 magic-value-comparison - Magic value used in comparison, consider replacing {value} with a constant variable
+    # "D1",  # pydocstyle (D) ... Later
+    # "I001",  # I001 unsorted-imports - isort wants no blank line between imports and froms
+    # # "ANN",  # flake8-annotations (ANN)
+]
+
+line-length = 128
+
+[tool.ruff.lint.isort]
+# force-sort-within-sections = true
+known-third-party = ["pygame", "numpy", "tinyecs", "patternegine", "pgcooldown", "rpeasings"]
+# lines-between-types = 1
