@@ -273,7 +273,7 @@ if has('win32')
     :noremap <leader>v :sp ~/_vimrc<CR><C-W>_
 else
     :noremap <leader>v :sp ~/.vimrc<CR><C-W>_
-C'endif
+endif
 :noremap <leader>V :source %<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 :set splitright
