@@ -1,4 +1,4 @@
 k8drain () {
     kubectl cordon "$@"
-    kubectl drain "$@" --ignore-daemon-sets --delete-emptydir-data
+    kubectl drain "$@" --ignore-daemonsets --delete-emptydir-data
 }
