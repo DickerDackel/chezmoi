@@ -18,6 +18,7 @@ lint.ignore = [
     "E201",  # E201 whitespace after '('
     "E241",  # E241 multiple spaces after ','
     "E265",  # E265 block comment should start with '# '
+    "E303",  # E303 too-many-blank-lines --> Buggy, reports top-level whitespace
     "E501",  # E501 line-too-long - Line too long ({width} > {limit})
     "E701",  # E701 Multiple statements on one line (colon)
     "E731",  # E731 lambda-assignment - Do not assign a lambda expression, use a def

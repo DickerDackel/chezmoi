@@ -2,7 +2,7 @@
     path = ~/.gitconfig-private
 
 [push]
-    default = simple
+	default = current
 	recurseSubmodules = on-demand
 
 [pull]
@@ -36,3 +36,5 @@
 	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
 [submodule]
 	recurse = true
+[init]
+	defaultBranch = name

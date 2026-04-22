@@ -34,6 +34,6 @@ vim.keymap.set("n", "<leader>R", "<cmd>LSPRestart<CR>")
 vim.keymap.set("n", "-", "<cmd>split | Oil<CR>", { noremap = true, silent = true, desc = "Open Oil in split" })
 vim.keymap.set("n", "<leader>|", "<cmd>vsplit | Oil<CR>", { noremap = true, silent = true, desc = "Open Oil in vsplit" })
 -- I hate accidental clicks from the touchpad, but I like scrolling
-vim.keymap.set({'n', 'i', 'v', 'c', 'x'}, "<LeftMouse>", "<nop>", {desc="No more accidental clicks on the touchpad"})
+-- vim.keymap.set({'n', 'i', 'v', 'c', 'x'}, "<LeftMouse>", "<nop>", {desc="No more accidental clicks on the touchpad"})
 vim.keymap.set("n", "\\\\", "<cmd>Buffers<CR>")
 vim.keymap.set("n", "<leader>O", "<cmd>ObsidianSearch<CR>")

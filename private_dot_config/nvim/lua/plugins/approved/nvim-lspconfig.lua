@@ -86,7 +86,7 @@ return { -- Main LSP Configuration
     -- See :help vim.diagnostic.Opts
     vim.diagnostic.config {
       severity_sort = true,
-      float = { border = 'rounded', source = 'if_many' },
+      float = { border = 'rounded', source = 'if_many', anchor_bias = 'below' },
       underline = { severity = vim.diagnostic.severity.ERROR },
       signs = vim.g.have_nerd_font and {
         text = {
