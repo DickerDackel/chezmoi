@@ -11,7 +11,8 @@ return {
       { "vscode", "snipmate", "lua" }
     )
     require("luasnip.loaders.from_vscode").lazy_load()
-    require("luasnip.loaders.from_lua").load({ paths = { "~/.config/nvim/snippets/" } })
+    -- require("luasnip.loaders.from_lua").load({ paths = { "~/.config/nvim/snippets/" } })
+    require("luasnip.loaders.from_lua").load({fs_event_providers = { autocmd = true, libuv = true } })
 
     require("luasnip").filetype_extend("lua", { "luadoc" })
     require("luasnip").filetype_extend("python", { "pydoc" })
