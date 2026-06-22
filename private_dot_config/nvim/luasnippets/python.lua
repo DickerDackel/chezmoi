@@ -5,6 +5,13 @@ local i = ls.insert_node
 
 ls.add_snippets('python', {
   s('#!', t("#!/usr/bin/env python3")),
+  s('ppr', {
+    t({'from pprint import pprint',
+      'pprint('}),
+    i(1, "FIXME"),
+    t({')',
+      ''})
+  }),
   s('ilerp', t({
     '# See Freya Holmer "The simple yet powerful math we don\'t talk about":',
     '#     https://www.youtube.com/watch?v=R6UB7mVO3fY',
