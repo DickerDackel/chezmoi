@@ -27,6 +27,7 @@
 [alias]
     dt = difftool
     st = status -s
+	s = status --short
 
 [user]
 	email = michael.lamertz@gmail.com
