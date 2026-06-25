@@ -2,16 +2,15 @@ require("config.lazy")
 vim.cmd("colorscheme golden")
 --
 require("lazy").setup({
-  require("plugins.testing.neodev"),
-
-  require("plugins.testing.align"),
+  { 'folke/neodev.nvim', { 'folke/neoconf.nvim', cmd = 'Neoconf' } },
+  { 'junegunn/vim-easy-align' },
   require("plugins.testing.conform"),
   require("plugins.testing.harpoon"),
   require("plugins.testing.luasnip"),
   require("plugins.testing.obsidian"),
   require("plugins.testing.snacks"),
   require("plugins.testing.trouble"),
-  require("plugins.testing.gruvbox"),
+  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {} },
 
   require("plugins.kickstart.lazydev"),
   require("plugins.kickstart.todo-comments"),
@@ -19,12 +18,11 @@ require("lazy").setup({
   require("plugins.approved.blink"),
   require("plugins.approved.fzf"),
   require("plugins.approved.lualine"),
-  require("plugins.approved.markdown"),
-  require("plugins.approved.nvim-lspconfig"),
+  { 'tpope/vim-markdown' },
   require("plugins.approved.nvim-treesitter"),
   require("plugins.approved.oil"),
-  require("plugins.approved.pep8indent"),
-  require("plugins.approved.startify"),
+  { 'vimjas/vim-python-pep8-indent' },
+  { 'mhinz/vim-startify' },
   require("plugins.approved.tree"),
   require("plugins.approved.which-key"),
 
