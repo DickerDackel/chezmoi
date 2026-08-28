@@ -37,3 +37,10 @@ vim.keymap.set("n", "<leader>|", "<cmd>vsplit | Oil<CR>", { noremap = true, sile
 -- vim.keymap.set({'n', 'i', 'v', 'c', 'x'}, "<LeftMouse>", "<nop>", {desc="No more accidental clicks on the touchpad"})
 vim.keymap.set("n", "\\\\", "<cmd>Buffers<CR>")
 vim.keymap.set("n", "<leader>O", "<cmd>ObsidianSearch<CR>")
+
+local opts = { noremap=true, silent=false }
+vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", opts)
+vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)

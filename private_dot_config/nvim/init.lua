@@ -7,9 +7,11 @@ require("lazy").setup({
   require("plugins.testing.conform"),
   require("plugins.testing.harpoon"),
   require("plugins.testing.luasnip"),
-  require("plugins.testing.obsidian"),
+  -- require("plugins.testing.obsidian"),
   require("plugins.testing.snacks"),
   require("plugins.testing.trouble"),
+  require("plugins.testing.zk-nvim"),
+  require("plugins.testing.render-markdown"),
   { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {} },
 
   require("plugins.kickstart.lazydev"),
@@ -18,7 +20,7 @@ require("lazy").setup({
   require("plugins.approved.blink"),
   require("plugins.approved.fzf"),
   require("plugins.approved.lualine"),
-  { 'tpope/vim-markdown' },
+  -- { 'tpope/vim-markdown' },
 
   -- LSP
   -- This was so useful!  https://dotfiles.substack.com/p/native-lsp-in-neovim-012
