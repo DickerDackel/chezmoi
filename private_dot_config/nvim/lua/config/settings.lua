@@ -23,6 +23,7 @@ vim.o.signcolumn = 'yes'
 ------------------------------------------------------------------------
 -- Mine...
 ------------------------------------------------------------------------
+vim.o.termguicolors = true
 vim.o.expandtab = true
 vim.o.sidescroll = 10
 vim.o.scrolloff = 5
