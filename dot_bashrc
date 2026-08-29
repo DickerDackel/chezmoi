@@ -16,11 +16,11 @@ export LESS=-isSXRF
 export PAGER=less
 
 for dir in \
-    ~/.local/bin \
-    /opt/*/bin \
-    /usr/local/bin \
+    /usr/sbin \
     /sbin \
-    /usr/sbin
+    /usr/local/bin \
+    /opt/*/bin \
+    ~/.local/bin
 do
     [ -d $dir ] && PATH=$dir:$PATH
 done
