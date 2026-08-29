@@ -1,9 +1,13 @@
 [tool.ruff]
 
-lint.preview = true
-format.preview = true
+line-length = 128
+preview = true
+
+[tool.ruff.format]
+preview = true
 
 [tool.ruff.lint]
+preview = true
 select = [ ]
 extend-select = [
     "E1", "E2", "E3", "E5", "W",  # pycodestyle previews
@@ -33,9 +37,7 @@ ignore = [
     # # "ANN",  # flake8-annotations (ANN)
 ]
 
-line-length = 128
 
 [tool.ruff.lint.isort]
-# force-sort-within-sections = true
-known-third-party = ["pygame", "numpy", "tinyecs", "patternegine", "pgcooldown", "rpeasings"]
-# lines-between-types = 1
+known-third-party = ["ddframework", "numpy", "patternegine", "pgcooldown", "pygame", "rpeasings", "tinyecs"]
+lines-between-types = 1
