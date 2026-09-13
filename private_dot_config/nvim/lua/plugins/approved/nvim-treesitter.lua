@@ -1,22 +1,29 @@
+-- Followed this: https://www.qu8n.com/posts/treesitter-migration-guide-for-nvim-0-12
+
 return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
+  lazy = false,
   build = ':TSUpdate',
-  main = 'nvim-treesitter.configs', -- Sets main module to use for opts
-  -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+  main = 'nvim-treesitter', -- Sets main module to use for opts
   opts = {
-    ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'python', 'query', 'vim', 'vimdoc' },
-    -- Autoinstall languages that are not installed
     auto_install = true,
-    highlight = {
-      enable = true,
-      -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-      --  If you are experiencing weird indenting issues, add the language to
-      --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-      additional_vim_regex_highlighting = { 'ruby' },
-    },
-    -- indent = { enable = true, disable = { 'ruby' } },
-    indent = { enable = true, disable = { 'ruby', 'python', 'yaml' } },
   },
+  init = function ()
+    vim.api.nvim_create_autocmd('FileType', {
+      callback = function()
+        pcall(vim.treesitter.start)
+      end,
+    })
+
+    local ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'python', 'query', 'vim', 'vimdoc' }
+    local already_installed = require('nvim-treesitter.config').get_installed()
+    local parsers_to_install = vim.iter(ensure_installed)
+    :filter(function(parser)
+      return not vim.tbl_contains(already_installed, parser)
+    end)
+    :totable()
+    require('nvim-treesitter').install(parsers_to_install)
+  end,
   -- There are additional nvim-treesitter modules that you can use to interact
   -- with nvim-treesitter. You should go explore a few and see what interests you:
   --
