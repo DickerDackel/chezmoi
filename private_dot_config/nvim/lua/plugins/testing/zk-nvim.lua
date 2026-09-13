@@ -17,5 +17,8 @@ return {
     tags = {
       multi_select_strategy = "AND",
     },
+    highlight = {
+      additional_vim_regex_highlighting = { "markdown" }
+    },
   },
 }
