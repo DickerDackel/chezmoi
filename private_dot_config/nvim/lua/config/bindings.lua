@@ -21,6 +21,8 @@ vim.keymap.set("n", "<leader>n", "<cmd>set invnumber<CR>")
 
 vim.keymap.set("n", "<leader>F", "<cmd>set foldmethod=indent<CR>")
 vim.keymap.set("n", "<leader>Q", "!!$SHELL<CR>")
+vim.keymap.set("n", "<leader>cc", "!!figlet -t -f rectangles<CR>")
+
 vim.keymap.set("n", "<leader>e", 'yy:@"<CR>')
 vim.keymap.set("n", "<leader>f", "<cmd>set foldmethod=manual<CR>")
 vim.keymap.set("n", "<leader>g", "<cmd>GFiles<CR>")
