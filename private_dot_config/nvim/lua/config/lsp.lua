@@ -162,6 +162,7 @@ vim.lsp.enable({
   -- 'ty',
   'lua_ls',
   'stylua',
+  'tailwindcss',
 })
 
 vim.diagnostic.config {

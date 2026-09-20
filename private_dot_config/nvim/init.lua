@@ -4,14 +4,8 @@ vim.cmd("colorscheme golden")
 require("lazy").setup({
   { 'folke/neodev.nvim', { 'folke/neoconf.nvim', cmd = 'Neoconf' } },
   { 'junegunn/vim-easy-align' },
-  require("plugins.testing.conform"),
-  require("plugins.testing.harpoon"),
-  require("plugins.testing.luasnip"),
-  -- require("plugins.testing.obsidian"),
-  require("plugins.testing.snacks"),
   require("plugins.testing.trouble"),
-  require("plugins.testing.zk-nvim"),
-  require("plugins.testing.render-markdown"),
+  require("plugins.approved.render-markdown"),
   { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {} },
 
   require("plugins.kickstart.lazydev"),
@@ -20,7 +14,11 @@ require("lazy").setup({
   require("plugins.approved.blink"),
   require("plugins.approved.fzf"),
   require("plugins.approved.lualine"),
-  -- { 'tpope/vim-markdown' },
+  require("plugins.approved.conform"),
+  require("plugins.approved.harpoon"),
+  require("plugins.approved.luasnip"),
+  require("plugins.approved.snacks"),
+  require("plugins.approved.zk-nvim"),
 
   -- LSP
   -- This was so useful!  https://dotfiles.substack.com/p/native-lsp-in-neovim-012
@@ -50,6 +48,7 @@ require("lazy").setup({
         'lua_ls',
         'stylua',
         'prettier',
+        'tailwindcss',
       }
     }
   },
