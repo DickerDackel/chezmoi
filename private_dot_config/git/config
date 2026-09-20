@@ -2,24 +2,24 @@
     path = ~/.gitconfig-private
 
 [push]
-	default = current
-	recurseSubmodules = on-demand
+    default = current
+    recurseSubmodules = on-demand
 
 [pull]
     rebase = false
-	ff = only
+    ff = only
 
 [credential]
     helper = store --file ~/.git-credentials
 
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 
 [merge]
     tool = vimmdiff
 
 [difftool]
-	prompt = false
+    prompt = false
 
 [core]
     editor = vim
@@ -27,15 +27,17 @@
 [alias]
     dt = difftool
     st = status -s
-	s = status --short
+    s = status --short
 
 [user]
-	email = michael.lamertz@gmail.com
-	name = Michael Lamertz
+    email = michael.lamertz@gmail.com
+    name = Michael Lamertz
 
 [difftool "vimdiff"]
-	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+    cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+
 [submodule]
-	recurse = true
+    recurse = true
+
 [init]
-	defaultBranch = name
+    defaultBranch = name
