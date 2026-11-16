@@ -46,3 +46,11 @@ vim.api.nvim_set_keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' }
 vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", opts)
 vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)
+
+vim.api.nvim_set_keymap("c", "<C-A>", "<Home>", opts)
+vim.api.nvim_set_keymap("c", "<C-F>", "<Right>", opts)
+vim.api.nvim_set_keymap("c", "<C-B>", "<Left>", opts)
+vim.api.nvim_set_keymap("c", "<C-E>", "<End>", opts)
+vim.api.nvim_set_keymap("c", "<C-D>", "<Del>", opts)
+vim.api.nvim_set_keymap("c", "<M-f>", "<S-Right>", opts)
+vim.api.nvim_set_keymap("c", "<M-b>", "<S-Left>", opts)
